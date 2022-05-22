@@ -1,0 +1,60 @@
+Create employee table as follows EMP(eno, ename, designation, salary).
+Write Ajax program to select the employees name and print the selected employee’s details.
+
+
+html file :
+
+<html>
+<head>
+<script type="text/javascript">
+ function get_emp(ename)
+{          
+            var ob=false;
+            ob=new XMLHttpRequest();
+            ob.onreadystatechange=function()
+            {
+                        if(ob.readyState==4 && ob.status==200)
+                        document.getElementById("place").innerHTML=ob.responseText;           
+            }
+            ob.open("GET","slip_7.php?ename="+ename,true);
+            ob.send();
+}
+</script>
+</head>
+
+<body>
+Select Name Of Employee :
+<select name="ename" onchange="get_emp(this.value)">
+      <option value="">select emp</option>
+      <option value="Nikita">Nikita</option>
+      <option value="Shehal">Shehal</option>
+      <option value="Faizal">Faizal</option>
+</select>
+<div id="place"></div>
+</body>
+</html>
+
+php file :
+
+<?php
+            $ename=$_GET['ename'];
+
+            $con=mysql_connect("localhost","root","");   
+            $d=mysql_select_db("bca_programs",$con);    
+            $q=mysql_query("select * from employee where ename='$ename'");  
+           
+            echo "<table border=1>";
+            echo "<tr><th>Eno</th><th>Ename</th><th>Designation</th><th>salary</th></tr>";
+
+            while($row=mysql_fetch_array($q))
+            {
+                        echo "<tr>";
+                        echo "<td>".$row[0]."</td>";
+                        echo "<td>".$row[1]."</td>";
+                        echo "<td>".$row[2]."</td>";
+                        echo "<td>".$row[3]."</td>";
+                        echo "</tr>";
+            }
+
+            echo "</table>";
+?>
