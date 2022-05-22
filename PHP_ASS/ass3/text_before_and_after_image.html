@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+	 $(document).ready(function(){
+         $("#button1").click(function(){
+	 $("img").before("<b>adding text Before image</b>");
+	 });
+
+	 $("#button2").click(function(){
+	 $("img").after("<b>adding text After image</b>");
+	 });
+
+	 });
+
+</script>
+</head>
+<body>
+  
+	 <img src="dog.jpg" width="300" height="300"> 
+ 
+
+<br><button id = "button1">Add text Before</button>
+<button id = "button2">Add text After</button>
+</body>
+</html>
+

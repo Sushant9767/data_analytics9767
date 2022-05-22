@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $("#btn1").click(function(){
+         $("p").append("<b>Prajwal  </b>");
+       });
+
+      $("#btn2").click(function(){
+         $("ol").append("<b> Number 3</b>");
+       });
+  });
+</script>
+</head>
+<body>
+  <p>My Name is </P>
+  <ol>
+    <li> number 1</li>
+    <li> Number 2</li>
+  </ol>
+
+<button id = "btn1">Append 1 </button>
+<button id = "btn2">Append Number </button>
+</body>
+</html>

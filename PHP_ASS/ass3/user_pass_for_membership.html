@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body> 
+ <script type = "text/javascript">  
+    function validateform(){  
+    var name=document.myform.name.value;  
+    var password=document.myform.password.value;  
+      
+    if (name==null || name=="" || password==null || password.length>=7){  
+      alert("Error Happend"); 
+      return false;  
+    }  
+     else
+      alert("register successful");
+    }  
+    </script>  
+    <body>  
+    <form name="myform" method="post" action="" onsubmit="return validateform()" >  
+    Name: <input type="text" name="name"><br/>  
+    Password: <input type="password" name="password"><br/>  
+    <input type="submit" value="Register">  
+    </form>  
+    </body>
+</html>

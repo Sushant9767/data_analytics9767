@@ -1,0 +1,3 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="item.css"?>
+<Store><Item><ItemName>Pen</ItemName><ItemPrice>35</ItemPrice><Quantity>150</Quantity></Item><Item><ItemName>Pencil</ItemName><ItemPrice>3</ItemPrice><Quantity>150</Quantity></Item><Item><ItemName>Eraser</ItemName><ItemPrice>2</ItemPrice><Quantity>150</Quantity></Item><Item><ItemName>Notebook</ItemName><ItemPrice>40</ItemPrice><Quantity>100</Quantity></Item><Item><ItemName>Book</ItemName><ItemPrice>180</ItemPrice><Quantity>150</Quantity></Item></Store>
